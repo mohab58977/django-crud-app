@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="px-3 py-2 bg-gray-100 rounded-sm">
+    <h3 class="text-3xl text-gray-900">{{ project.title }}</h3>
+    <p class="text-gray-900">{{ project.details }}</p>
+    <p class="text-gray-600 text-sm">{{ project.start_date }}</p>
+    <p class="text-gray-600 text-sm">{{ project.end_date }}</p>
+    <p class="text-red-600 text-sm">{{ project.owner }}</p>
+
+
+
+    <div class="mt-5 py-5 border-t border-gray-200">
+        <a href="/projects/{{ project.id }}/edit/" class="text-blue-500">
+            Edit
+        </a>
+        <a href="/projects/{{ project.id }}/delete/" class="ml-3 text-blue-500">
+            Delete
+        </a>
+    </div>
+
+
+</div>
+
+{% endblock %}
